@@ -1,0 +1,150 @@
+.commercial-section {
+    background-color: #3478c1;
+    color: #fff;
+    padding: 70px 0;
+    margin: 25px auto;
+}
+
+.commercial-section h1 {
+    font-size: 2.5rem;
+    font-weight: 700;
+    text-align: center;
+    margin-bottom: 25px;
+}
+
+.commercial-section p {
+    font-size: 1.5rem;
+    text-align: center;
+}
+
+.hero-img {
+    width: 260px;
+    height: 260px;
+    object-fit: cover;
+    border-radius: 50%;
+    border: 6px solid #fff;
+}
+
+/* Service Cards */
+.service-card {
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+}
+
+.service-card img {
+    height: 260px;
+    object-fit: cover;
+}
+
+.card-footer-custom {
+    background-color: #0056B3 ;
+    color: #fff;
+    padding: 15px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    cursor: pointer;
+}
+
+.card-footer-custom:hover{
+    background-color: #0d6efd;
+    color: black;
+}
+
+.arrow-btn {
+    background-color: #fff;
+    color: #000;
+    width: 38px;
+    height: 38px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+}
+
+.arrow-btn i {
+    font-size: 1.3rem;
+}
+
+.contact-section {
+    background-color: #d86535;
+    padding: 70px 0;
+    margin:50px;
+}
+
+.contact-title {
+    color: #fff;
+}
+
+.contact-title h6 {
+    font-size: 1.5rem;
+    margin-bottom: 20px;
+}
+
+.contact-title h2 {
+    font-weight: 700;
+    margin-top: 10px;
+    font-size: 1.5rem;
+}
+
+.info-box {
+    background: #fff;
+    border-radius: 18px;
+    padding: 20px;
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    margin-top: 25px;
+}
+
+.info-icon {
+    background-color: #d86535;
+    color: #fff;
+    width: 55px;
+    height: 55px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 22px;
+}
+
+/* Form Card */
+.form-card {
+    background: #fff;
+    border-radius: 25px;
+    padding: 35px;
+}
+
+.form-control {
+    border-radius: 10px;
+    padding: 10px 14px;
+}
+
+textarea.form-control {
+    height: 120px;
+    resize: none;
+}
+
+.send-btn {
+    background-color: #e96b2f;
+    border: none;
+    color: #fff;
+    font-size: 1.5rem;
+    border-radius: 30px;
+    padding: 12px;
+    width: 100%;
+    margin-top: 20px;
+}
+
+.send-btn:hover {
+    background-color: #cf5a22;
+}
+
+label {
+    font-weight: 600;
+    margin-bottom: 5px;
+    font-size: 1.5rem;
+}

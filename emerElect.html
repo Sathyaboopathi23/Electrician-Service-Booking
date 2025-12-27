@@ -1,0 +1,627 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Electrician Service Booking</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
+  <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <link rel="icon" type="image/png" href="images/IMG_20250618_142909_276-removebg-preview.png"
+  >
+  <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="home.css">
+  <style>
+    .hero-sec{
+        background:url("images/IMG_20250619_181520_452.jpg") center/cover no-repeat;
+        min-height: 600px;
+    }
+
+    .emergency-section {
+        padding: 60px 0;
+    }
+
+    .emergency-title {
+        font-size: 1.5rem;
+        font-weight: 700;
+        margin-bottom: 15px;
+    }
+
+    .emergency-text {
+        font-size: 1.2rem;
+        margin-bottom: 15px;
+    }
+
+    .stars {
+        color: #f5c400;
+        font-size: 1.5rem;
+    }
+
+    .review-text {
+        color: #f26522;
+        margin-bottom: 25px;
+    }
+
+    .emergency-img {
+        width: 260px;
+        border-radius: 12px;
+        margin-bottom: 20px;
+    }
+
+    .call-btn {
+        background: #e45d25;
+        color: #fff;
+        padding: 12px 28px;
+        border-radius: 30px;
+        font-size: 1.2rem;
+        border: none;
+        margin-left: 15px;
+    }
+
+    .call-btn:hover{
+        background: white;
+        border: 1px solid black;
+        color: #000;
+    }
+
+    .callback-card {
+        background: #3478bf;
+        padding: 30px;
+        border-radius: 20px;
+        color: #fff;
+    }
+
+    .callback-title {
+        font-size: 2rem;
+        font-weight: 700;
+        margin-bottom: 10px;
+    }
+
+    .callback-sub {
+        font-size: 1.2rem;
+        margin-bottom: 25px;
+    }
+
+    .form-control {
+        border-radius: 10px;
+        padding: 14px;
+        margin-bottom: 18px;
+        border: none;
+    }
+
+    .send-btn{
+        background: #e45d25;
+        border: none;
+        padding: 12px 40px;
+        border-radius: 30px;
+        font-size: 1.5rem;
+        color: #fff;
+        display: block;
+        margin: 20px auto 0;
+    }
+
+    .send-btn:hover{
+        background: white;
+        border: 1px solid black;
+        color: #000;
+    }
+
+    .emergency-badge {
+        position: absolute;
+        background: #1c8cff;
+        color: #fff;
+        padding: 8px 14px;
+        border-radius: 12px;
+        font-weight: 600;
+        bottom: 20px;
+        left: 20px;
+    }
+
+    .why-section{
+        padding: 60px 0;
+    }
+
+    .why-title{
+        font-size: 26px;
+        font-weight: 700;
+        margin-bottom: 40px;
+    }
+
+    .why-grid{
+        display: grid;
+        grid-template-columns: repeat(5, 1fr);
+        gap: 20px;
+    }
+
+    .why-card{
+        border: 2px solid #f26522;
+        border-radius: 18px;
+        padding: 35px 20px;
+        text-align: center;
+        background: #fff;
+    }
+
+
+    .why-icon{
+        font-size: 38px;
+        margin-bottom: 18px;
+        color: #000;
+    }
+
+    .why-text{
+        font-size: 16px;
+        font-weight: 500;
+        line-height: 1.4;
+    }
+
+    .quality-section{
+        background: #2f75bb;
+        color: #fff;
+    }
+
+    .quality-left{
+        padding: 70px 60px;
+    }
+
+    .quality-title{
+        font-size: 28px;
+        font-weight: 600;
+        margin-bottom: 20px;
+        text-align: center;
+    }
+
+    .quality-content p{
+        font-size: 1.2rem;
+        line-height: 1.7;
+        margin-bottom: 16px;
+        text-align: center;
+    }
+
+    .quality-buttons{
+        margin-top: 30px;
+    }
+
+    .btn-call,
+    .btn-message{
+        background: #f26522;
+        color: #fff;
+        padding: 12px 30px;
+        border-radius: 30px;
+        text-decoration: none;
+        margin-right: 15px;
+        font-weight: 500;
+        font-size: 1.5rem;
+    }
+
+    .btn-call:hover,
+    .btn-message:hover{
+        background: white;
+        color: #000;
+        border: 1px solid black;
+    }
+
+    .quality-right{
+        max-height: 700px;
+    }
+
+    .quality-img{
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+
+    .signs-section{
+        padding: 70px 0;
+        background: #ffffff;
+    }
+
+    .signs-box{
+        background: #3478c0;
+        padding: 50px 60px;
+        color: #ffffff;
+    }
+
+    .signs-title{
+        text-align: center;
+        font-size: 2rem;
+        font-weight: 600;
+        margin-bottom: 25px;
+    }
+
+    .signs-intro{
+        font-size: 1.3rem;
+        line-height: 1.6;
+        margin-bottom: 25px;
+    }
+
+    .signs-list{
+        list-style: disc;
+        padding-left: 20px;
+    }
+
+    .signs-list li{
+        font-size: 1.1rem;
+        line-height: 1.7;
+        margin-bottom: 20px;
+    }
+
+    .signs-list strong{
+        font-weight: 600;
+    }
+
+    @media (max-width: 768px){
+        .signs-box{
+            padding: 35px 25px;
+        }
+
+        .signs-title{
+            font-size: 22px;
+        }
+    }
+
+    @media (max-width: 992px){
+        .quality-left{
+            padding: 40px 30px;
+        }
+
+        .quality-buttons a{
+            display: inline-block;
+            margin-bottom: 15px;
+        }
+    }
+</style>
+</head>
+<body>
+<div class="top-bar">
+    <div class="container d-flex justify-content-between align-items-center">
+        <div class="logo" onclick="window.location.href='home.html'">
+            <img src="images/IMG_20250618_142909_276-removebg-preview.png" alt="Electric Dreams Logo">
+            <span>Electric dreams</span>
+        </div>
+
+        <div class="header-buttons">
+            <a href="tel:+911234567890" class="btn btn-call">Call(+91)1234567890</a>
+            <a href="#" class="btn btn-book">Book Now</a>
+        </div>
+    </div>
+</div>
+
+<nav class="navbar navbar-expand-lg main-navbar py-3">
+    <div class="container">
+        <form class="d-flex search-box">
+            <i class="bi bi-search"></i>
+            <input class="form-control" type="search" placeholder="Search electricians">
+        </form>
+
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarMenu">
+        <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarMenu">
+            <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+                <li class="nav-item"><a class="nav-link" href="home.html">Home</a></li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown" role="button" onclick="window.location.href='service.html'">Services</a>
+                </li>
+                <li class="nav-item"><a class="nav-link" href="emerElect.html">Emergency electrician</a></li>
+                <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
+                <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+                <li class="nav-item"><a class="nav-link" href="area.html">Areas we services</a></li>
+                <li class="nav-item"><a class="nav-link" href="account.html">Account</a></li>
+                <li class="nav-item"><a class="nav-link" href="#" class="nav-link position-relative" data-bs-toggle="modal" data-bs-target="#cartModal">Cart <sup>1</sup></a></li>
+            </ul>
+        </div>
+    </div>
+</nav>
+
+<div class="modal fade" id="cartModal" tabindex="-1">
+    <div class="modal-dialog modal-dialog-end modal-full-height">
+        <div class="modal-content cart-drawer">
+            <div class="modal-header border-0">
+                <h5 class="modal-title fw-bold fs-3">Cart</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+            </div>
+
+            <div class="modal-body">
+                <p class="fw-semibold fs-4">Bulb/tubelight holder installation</p>
+                <div class="d-flex justify-content-between align-items-center mb-3">
+                    <span class="fs-4 fw-bold">Add</span>
+                    <div class="qty">
+                        <button>-</button>
+                        <span>1</span>
+                        <button>+</button>
+                    </div>
+                </div>
+                <p class="fw-bold fs-5">Amount: ₹109</p>
+                <div class="offer-strip">
+                    Add ₹92 more to save on visitation fees
+                </div>
+                <button class="btn book-btn w-100 mt-3" onclick="window.location.href='checkOut.html'">Book now</button>
+
+                <hr>
+
+                <div class="offer-card">
+                    <div class="d-flex gap-2 align-items-center">
+                        <i class="bi bi-percent text-danger"></i>
+                        <div>
+                            <strong class="fs-4 fw-bold">Get visitation fees offer</strong><br>
+                            <small>On orders above ₹200</small><br>
+                            <a href="#" class="text-danger text-decoration-none">View more offers</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="uc-box mt-4">
+                    <p class="fs-4 text-center fw-bold">UC promise</p>
+                    <ul>
+                        <li>✔ Verified professionals</li>
+                        <li>✔ Hassle free booking</li>
+                        <li>✔ Transparent pricing</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<section class="hero-sec">
+</section>
+
+<div class="container emergency-section">
+    <div class="row align-items-center">
+        <div class="col-md-6 position-relative">
+            <h2 class="emergency-title">
+                Professional Emergency Electrician - Fast & Reliable
+            </h2>
+
+            <p class="emergency-text">
+                24-hour Electrician In Electric dreams. Call Our Professional
+                Electricians Now To Get Help Fast
+            </p>
+
+            <div class="stars">
+                ★ ★ ★ ★ ★
+            </div>
+
+            <div class="review-text">
+                Over 215 google reviews
+            </div>
+
+            <div class="position-relative d-inline-block">
+                <img src="images/IMG_20250620_140801_142.jpg"
+                     class="emergency-img">
+                     <button class="call-btn">
+                    Call: (+91)1234567890
+                </button>
+            </div>
+
+        </div>
+
+        <div class="col-md-6">
+            <div class="callback-card">
+                <div class="callback-title">Request a call back</div>
+                <div class="callback-sub">
+                    Fill-in your details below and we will get back to
+                    you within 30 minutes or less!
+                </div>
+
+                <input type="text" class="form-control" placeholder="Name">
+                <input type="text" class="form-control" placeholder="Mobile">
+                <input type="email" class="form-control" placeholder="Email address">
+                <input type="text" class="form-control" placeholder="Services">
+
+                <button class="send-btn">Send Message</button>
+            </div>
+        </div>
+
+    </div>
+</div>
+
+<section class="why-section">
+    <div class="container">
+        <h2 class="why-title">Why choose our electrician?</h2>
+        <div class="why-grid">
+
+            <div class="why-card">
+                <i class="bi bi-award why-icon"></i>
+                <div class="why-text">
+                    Lifetime<br>
+                    Workmanship<br>
+                    Warranty
+                </div>
+            </div>
+           
+            <div class="why-card">
+                <i class="bi bi-patch-check why-icon"></i>
+                <div class="why-text">
+                    Money Back<br>
+                    Guarantee
+                </div>
+            </div>
+
+            <div class="why-card">
+                <i class="bi bi-truck why-icon"></i>
+                <div class="why-text">
+                    24/7 Emergency<br>
+                    Service
+                </div>
+            </div>
+
+            <div class="why-card">
+                <i class="bi bi-star why-icon"></i>
+                <div class="why-text">
+                    190+ 5-Star<br>
+                    Customer<br>
+                    Reviews
+                </div>
+            </div>
+
+            <div class="why-card">
+                <i class="bi bi-gear why-icon"></i>
+                <div class="why-text">
+                    Awarded For<br>
+                    Service<br>
+                    Excellence
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="quality-section">
+    <div class="container-fluid">
+        <div class="row g-0 align-items-stretch">
+            <div class="col-lg-6 quality-left d-flex">
+                <div class="quality-content">
+
+                    <h2 class="quality-title">Quality Workmanship</h2>
+
+                    <p>
+                        At electrical dreams, we understand that electrical emergencies can happen at any time.
+                        Whether it’s a power outage, faulty wiring, sparking outlets, or an electrical hazard,
+                        our emergency electricians are ready to respond quickly to restore safety and
+                        functionality to your home or business.
+                        When you call us for an emergency electrical service, our licensed electricians
+                        will promptly assess the situation, identify the cause, and provide fast,
+                        effective repairs. We follow Australian safety standards and use high-quality
+                        equipment to resolve issues safely, preventing further risks or damage. Our lifetime workmanship warranty reflects our confidence in the reliability
+                        of our services. Your safety is our top priority. Choose Adelaide Urban Electrical for reliable emergency electrical services and get help you need-day or night. With our expert team, you can have peace of mind knowing your electrical issues will be resolved quickly and safely.
+                    </p>
+
+                    <div class="quality-buttons">
+                        <a href="#" class="btn btn-call">Call Now</a>
+                        <a href="#" class="btn btn-message">Send a Message</a>
+                    </div>
+
+                </div>
+            </div>
+
+            <div class="col-lg-6 quality-right">
+                <img src="images/IMG_20250617_205804_345.jpg"
+                     alt="Electricians"
+                     class="img-fluid quality-img">
+            </div>
+
+        </div>
+    </div>
+</section>
+
+<section class="cta-section">
+    <div class="container">
+        <div class="cta-box d-flex flex-column flex-md-row align-items-center justify-content-between">
+            <h4 class="cta-text mb-3 mb-md-0 text-center">
+                Get in Touch with Electric Dreams<br>
+                Electrical Today
+            </h4>
+            <a href="tel:+911234567890" class="cta-btn">
+                Call(+91)1234567890
+            </a>
+        </div>
+    </div>
+</section>
+
+<section class="signs-section">
+    <div class="container">
+        <div class="signs-box">
+
+            <h2 class="signs-title">
+                Signs you need an emergency electrician
+            </h2>
+
+            <p class="signs-intro">
+                Many signs indicate when it's time to call a 24 hour electrician for help with your electrical
+                problems. Here's a quick list of what to look for:
+            </p>
+
+            <ul class="signs-list">
+                <li>
+                    <strong>Smoke coming out of your outlets</strong> - Smoke from power outlets can signify that the wiring
+                    in your home or business is faulty and needs to be replaced. If you don't have an after-hours electrician
+                    on hand to inspect the problem, it could cause a fire. If you see smoke or hear crackling sounds from an
+                    outlet, turn off the power at the breaker box and call an expert.
+                </li>
+
+                <li>
+                    <strong>Smell of burning electronics</strong> - When you suddenly smell burning electronics, something
+                    might be wrong with your electrical system. If the smell is strong and seems to be coming from more than
+                    one device in your home, it's time to call an emergency electrician.
+                </li>
+
+                <li>
+                    <strong>Sudden isolated loss of power</strong> - If there is a sudden loss of power over a small area or
+                    within one room of your home, this could be due to a short circuit or blown fuse, or it could result from
+                    faulty wiring that needs to be repaired immediately.
+                </li>
+
+                <li>
+                    <strong>Circuit breaker keeps tripping or resetting</strong> - Circuit breakers are supposed to trip
+                    when they sense too much current, but if they trip too often, there might be something wrong with the
+                    wiring, or your breaker may be faulty.
+                </li>
+            </ul>
+
+        </div>
+    </div>
+</section>
+
+<footer class="footer-section">
+    <div class="container">
+        <div class="row gy-4">
+            <div class="col-lg-4 col-md-6" style="text-align: left;">
+                <div class="footer-logo mb-3 ">
+                    <img src="images/IMG_20250618_142909_276-removebg-preview.png" alt="Electric Dreams Logo">
+                    <span style="color: white;">Electric dreams</span>
+                </div>
+                <p class="footer-text">
+                Voltaic Electrical provides expert residential, commercial, and emergency
+                electrical services across Perth.
+                </p>
+
+                <div class="footer-social">
+                <a href="#"><i class="bi bi-instagram"></i></a>
+                <a href="#"><i class="bi bi-google"></i></a>
+                </div>
+            </div>
+
+            <div class="col-lg-3 col-md-6">
+                <h5 class="footer-title">Services</h5>
+                <ul class="footer-list">
+                    <li>Lighting</li>
+                    <li>Private Power Poles</li>
+                    <li>Smoke Alarms</li>
+                    <li>EV Chargers</li>
+                    <li>Air Conditioning</li>
+                    <li>Thermographic Imaging</li>
+                    <li>View All</li>
+                </ul>
+            </div>
+
+            <div class="col-lg-2 col-md-6">
+                <h5 class="footer-title">Company</h5>
+                <ul class="footer-list">
+                    <li>About</li>
+                    <li>Service Areas</li>
+                    <li>Contact</li>
+                    <li>Reviews</li>
+                    <li>Resources</li>
+                    <li>Sitemap</li>
+                </ul>
+            </div>
+
+            <div class="col-lg-3 col-md-6">
+                <h5 class="footer-title">Get in Touch</h5>
+                <ul class="footer-contact">
+                    <li><i class="fas fa-location-dot"></i> Location, Chennai</li>
+                    <li><i class="fas fa-phone"></i> (+91)1234567890</li>
+                    <li><i class="fas fa-envelope"></i> Support@electricdreams.com</li>
+                </ul>
+            </div>
+
+        </div>
+    </div>
+</footer>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

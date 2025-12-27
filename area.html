@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Electrician Service Booking</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
+  <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <link rel="icon" type="image/png" href="images/IMG_20250618_142909_276-removebg-preview.png"
+  >
+  <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+<style>
+    .areas-section {
+        padding: 80px 0;
+    }
+
+    .areas-title {
+        text-align: center;
+        font-size: 2.5rem;
+        font-weight: 700;
+        color: #e85b1f;
+        margin-bottom: 10px;
+    }
+
+    .areas-subtitle {
+        text-align: center;
+        margin: 0 auto 40px;
+        font-size: 1.3rem;
+        color: #000;
+        font-weight: bold;
+    }
+
+    .area-box {
+        background: #dddcdc;
+        padding: 18px 10px;
+        text-align: center;
+        font-size: 1.2rem;
+        font-weight: bold;
+        border-radius: 2px;
+    }
+
+    .area-box:hover{
+        color: white;
+        background-color: #E25C26;
+    }
+</style>
+</head>
+<body>
+<div class="top-bar">
+    <div class="container d-flex justify-content-between align-items-center">
+        <div class="logo" onclick="window.location.href='home.html'">
+            <img src="images/IMG_20250618_142909_276-removebg-preview.png" alt="Electric Dreams Logo">
+            <span>Electric dreams</span>
+        </div>
+
+        <div class="header-buttons">
+            <a href="tel:+911234567890" class="btn btn-call">Call(+91)1234567890</a>
+            <a href="#" class="btn btn-book">Book Now</a>
+        </div>
+    </div>
+</div>
+
+<nav class="navbar navbar-expand-lg main-navbar py-3">
+    <div class="container">
+        <form class="d-flex search-box">
+            <i class="bi bi-search"></i>
+            <input class="form-control" type="search" placeholder="Search electricians">
+        </form>
+
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarMenu">
+        <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarMenu">
+            <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+                <li class="nav-item"><a class="nav-link" href="home.html">Home</a></li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown" role="button" onclick="window.location.href='service.html'">Services</a>
+                </li>
+                <li class="nav-item"><a class="nav-link" href="emerElect.html">Emergency electrician</a></li>
+                <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
+                <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+                <li class="nav-item"><a class="nav-link" href="area.html">Areas we services</a></li>
+                <li class="nav-item"><a class="nav-link" href="account.html">Account</a></li>
+                <li class="nav-item"><a class="nav-link" href="#" class="nav-link position-relative" data-bs-toggle="modal" data-bs-target="#cartModal">Cart <sup>1</sup></a></li>
+            </ul>
+        </div>
+    </div>
+</nav>
+
+<div class="modal fade" id="cartModal" tabindex="-1">
+    <div class="modal-dialog modal-dialog-end modal-full-height">
+        <div class="modal-content cart-drawer">
+            <div class="modal-header border-0">
+                <h5 class="modal-title fw-bold fs-3">Cart</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+            </div>
+
+            <div class="modal-body">
+                <p class="fw-semibold fs-4">Bulb/tubelight holder installation</p>
+                <div class="d-flex justify-content-between align-items-center mb-3">
+                    <span class="fs-4 fw-bold">Add</span>
+                    <div class="qty">
+                        <button>-</button>
+                        <span>1</span>
+                        <button>+</button>
+                    </div>
+                </div>
+                <p class="fw-bold fs-5">Amount: ₹109</p>
+                <div class="offer-strip">
+                    Add ₹92 more to save on visitation fees
+                </div>
+                <button class="btn book-btn w-100 mt-3" onclick="window.location.href='checkOut.html'">Book now</button>
+
+                <hr>
+
+                <div class="offer-card">
+                    <div class="d-flex gap-2 align-items-center">
+                        <i class="bi bi-percent text-danger"></i>
+                        <div>
+                            <strong class="fs-4 fw-bold">Get visitation fees offer</strong><br>
+                            <small>On orders above ₹200</small><br>
+                            <a href="#" class="text-danger text-decoration-none">View more offers</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="uc-box mt-4">
+                    <p class="fs-4 text-center fw-bold">UC promise</p>
+                    <ul>
+                        <li>✔ Verified professionals</li>
+                        <li>✔ Hassle free booking</li>
+                        <li>✔ Transparent pricing</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<section class="areas-section">
+    <div class="container">
+
+        <h2 class="areas-title">Areas we services</h2>
+
+        <p class="areas-subtitle">
+            Below are some areas we provide electrical services to. But, don't worry if your area is not listed,
+            we likely service your area too!
+        </p>
+
+        <div class="row g-4">
+            <div class="col-md-4"><div class="area-box">Ariyalur</div></div>
+            <div class="col-md-4"><div class="area-box">Chengalpattu</div></div>
+            <div class="col-md-4"><div class="area-box">Chennai</div></div>
+
+            <div class="col-md-4"><div class="area-box">Coimbatore</div></div>
+            <div class="col-md-4"><div class="area-box">Cuddalore</div></div>
+            <div class="col-md-4"><div class="area-box">Dharmapuri</div></div>
+
+            <div class="col-md-4"><div class="area-box">Dindigul</div></div>
+            <div class="col-md-4"><div class="area-box">Erode</div></div>
+            <div class="col-md-4"><div class="area-box">Kallakurichi</div></div>
+
+            <div class="col-md-4"><div class="area-box">Kancheepuram</div></div>
+            <div class="col-md-4"><div class="area-box">Kanniyakumari</div></div>
+            <div class="col-md-4"><div class="area-box">Karur</div></div>
+
+            <div class="col-md-4"><div class="area-box">Krishnagiri</div></div>
+            <div class="col-md-4"><div class="area-box">Madurai</div></div>
+            <div class="col-md-4"><div class="area-box">Mayiladuthurai</div></div>
+
+            <div class="col-md-4"><div class="area-box">Nagapattinam</div></div>
+            <div class="col-md-4"><div class="area-box">Namakkal</div></div>
+            <div class="col-md-4"><div class="area-box">Nilgiris</div></div>
+
+            <div class="col-md-4"><div class="area-box">Perambalur</div></div>
+            <div class="col-md-4"><div class="area-box">Pudukkottai</div></div>
+            <div class="col-md-4"><div class="area-box">Ramanathapuram</div></div>
+
+            <div class="col-md-4"><div class="area-box">Ranipet</div></div>
+            <div class="col-md-4"><div class="area-box">Salem</div></div>
+            <div class="col-md-4"><div class="area-box">Sivaganga</div></div>
+
+            <div class="col-md-4"><div class="area-box">Tenkasi</div></div>
+            <div class="col-md-4"><div class="area-box">Tanjavur</div></div>
+            <div class="col-md-4"><div class="area-box">Theni</div></div>
+
+            <div class="col-md-4"><div class="area-box">Thoothukudi</div></div>
+            <div class="col-md-4"><div class="area-box">Tiruchirapalli</div></div>
+            <div class="col-md-4"><div class="area-box">Tirunelveli</div></div>
+
+            <div class="col-md-4"><div class="area-box">Tirupatur</div></div>
+            <div class="col-md-4"><div class="area-box">Tiruppur</div></div>
+            <div class="col-md-4"><div class="area-box">Tiruvallur</div></div>
+
+            <div class="col-md-4"><div class="area-box">Tiruvannamalai</div></div>
+            <div class="col-md-4"><div class="area-box">Tiruvarur</div></div>
+            <div class="col-md-4"><div class="area-box">Vellore</div></div>
+
+            <div class="col-md-4"><div class="area-box">Vilupuram</div></div>
+            <div class="col-md-4"><div class="area-box">Virudhunagar</div></div>
+         
+
+        </div>
+    </div>
+</section>
+
+<section class="cta-section">
+    <div class="container">
+        <div class="cta-box d-flex flex-column flex-md-row align-items-center justify-content-between">
+            <h4 class="cta-text mb-3 mb-md-0 text-center">
+                Get in Touch with Electric Dreams<br>
+                Electrical Today
+            </h4>
+            <a href="tel:+911234567890" class="cta-btn">
+                Call(+91)1234567890
+            </a>
+        </div>
+    </div>
+</section>
+
+<footer class="footer-section">
+    <div class="container">
+        <div class="row gy-4">
+            <div class="col-lg-4 col-md-6" style="text-align: left;">
+                <div class="footer-logo mb-3 ">
+                    <img src="images/IMG_20250618_142909_276-removebg-preview.png" alt="Electric Dreams Logo">
+                    <span style="color: white;">Electric dreams</span>
+                </div>
+                <p class="footer-text">
+                Voltaic Electrical provides expert residential, commercial, and emergency
+                electrical services across Perth.
+                </p>
+
+                <div class="footer-social">
+                <a href="#"><i class="bi bi-instagram"></i></a>
+                <a href="#"><i class="bi bi-google"></i></a>
+                </div>
+            </div>
+
+            <div class="col-lg-3 col-md-6">
+                <h5 class="footer-title">Services</h5>
+                <ul class="footer-list">
+                    <li>Lighting</li>
+                    <li>Private Power Poles</li>
+                    <li>Smoke Alarms</li>
+                    <li>EV Chargers</li>
+                    <li>Air Conditioning</li>
+                    <li>Thermographic Imaging</li>
+                    <li>View All</li>
+                </ul>
+            </div>
+
+            <div class="col-lg-2 col-md-6">
+                <h5 class="footer-title">Company</h5>
+                <ul class="footer-list">
+                    <li>About</li>
+                    <li>Service Areas</li>
+                    <li>Contact</li>
+                    <li>Reviews</li>
+                    <li>Resources</li>
+                    <li>Sitemap</li>
+                </ul>
+            </div>
+
+            <div class="col-lg-3 col-md-6">
+                <h5 class="footer-title">Get in Touch</h5>
+                <ul class="footer-contact">
+                    <li><i class="fas fa-location-dot"></i> Location, Chennai</li>
+                    <li><i class="fas fa-phone"></i> (+91)1234567890</li>
+                    <li><i class="fas fa-envelope"></i> Support@electricdreams.com</li>
+                </ul>
+            </div>
+
+        </div>
+    </div>
+</footer>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

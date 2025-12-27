@@ -1,0 +1,399 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Electrician Service Booking</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
+  <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <link rel="icon" type="image/png" href="images/IMG_20250618_142909_276-removebg-preview.png"
+  >
+  <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="service.css">
+</head>
+<body>
+<div class="top-bar">
+    <div class="container d-flex justify-content-between align-items-center">
+        <div class="logo" onclick="window.location.href='home.html'">
+            <img src="images/IMG_20250618_142909_276-removebg-preview.png" alt="Electric Dreams Logo">
+            <span>Electric dreams</span>
+        </div>
+
+        <div class="header-buttons">
+            <a href="tel:+911234567890" class="btn btn-call">Call(+91)1234567890</a>
+            <a href="#" class="btn btn-book">Book Now</a>
+        </div>
+    </div>
+</div>
+
+<nav class="navbar navbar-expand-lg main-navbar py-3">
+    <div class="container">
+        <form class="d-flex search-box">
+            <i class="bi bi-search"></i>
+            <input class="form-control" type="search" placeholder="Search electricians">
+        </form>
+
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarMenu">
+        <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarMenu">
+            <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+                <li class="nav-item"><a class="nav-link" href="home.html">Home</a></li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown" role="button" onclick="window.location.href='service.html'">Services</a>
+                </li>
+                <li class="nav-item"><a class="nav-link" href="emerElect.html">Emergency electrician</a></li>
+                <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
+                <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+                <li class="nav-item"><a class="nav-link" href="area.html">Areas we services</a></li>
+                <li class="nav-item"><a class="nav-link" href="account.html">Account</a></li>
+                <li class="nav-item"><a class="nav-link" href="#" class="nav-link position-relative" data-bs-toggle="modal" data-bs-target="#cartModal">Cart <sup>1</sup></a></li>
+            </ul>
+        </div>
+    </div>
+</nav>
+
+<div class="modal fade" id="cartModal" tabindex="-1">
+    <div class="modal-dialog modal-dialog-end modal-full-height">
+        <div class="modal-content cart-drawer">
+            <div class="modal-header border-0">
+                <h5 class="modal-title fw-bold fs-3">Cart</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+            </div>
+
+            <div class="modal-body">
+                <p class="fw-semibold fs-4">Bulb/tubelight holder installation</p>
+                <div class="d-flex justify-content-between align-items-center mb-3">
+                    <span class="fs-4 fw-bold">Add</span>
+                    <div class="qty">
+                        <button>-</button>
+                        <span>1</span>
+                        <button>+</button>
+                    </div>
+                </div>
+                <p class="fw-bold fs-5">Amount: ₹109</p>
+                <div class="offer-strip">
+                    Add ₹92 more to save on visitation fees
+                </div>
+                <button class="btn book-btn w-100 mt-3" onclick="window.location.href='checkOut.html'">Book now</button>
+
+                <hr>
+
+                <div class="offer-card">
+                    <div class="d-flex gap-2 align-items-center">
+                        <i class="bi bi-percent text-danger"></i>
+                        <div>
+                            <strong class="fs-4 fw-bold">Get visitation fees offer</strong><br>
+                            <small>On orders above ₹200</small><br>
+                            <a href="#" class="text-danger text-decoration-none">View more offers</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="uc-box mt-4">
+                    <p class="fs-4 text-center fw-bold">UC promise</p>
+                    <ul>
+                        <li>✔ Verified professionals</li>
+                        <li>✔ Hassle free booking</li>
+                        <li>✔ Transparent pricing</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<section class="commercial-section">
+    <div class="container">
+        <div class="row align-items-center">
+            
+            <div class="col-md-6">
+                <h1>Commercial Services</h1>
+                <p>
+                    Our licensed electricians are experienced in handling <br>the unique electrical demands of commercial properties, <br>from offices and retail spaces to
+                    restaurants and <br>warehouses.
+                </p>
+            </div>
+
+            <div class="col-md-6 text-md-end text-center mt-4 mt-md-0">
+                <img src="images/IMG_20250617_202924_846.jpg"
+                     alt="Electrician"
+                     class="hero-img">
+            </div>
+
+        </div>
+    </div>
+</section>
+
+<section class="py-5">
+    <div class="container">
+        <div class="row g-4 mb-5">
+            <div class="col-md-4">
+                <div class="service-card" onclick="window.location.href='lighting.html'">
+                    <img src="images/IMG_20250617_203029_459.jpg" class="w-100" alt="img1">
+                    <div class="card-footer-custom">
+                        <div>
+                            <h6 class="mb-1 fs-4 fw-bold">Lighting installation</h6>
+                            <p style="font-size: 1rem;font-weight: 600;">Energy-efficient lighting solutions for your home or business.</p>
+                        </div>
+                        <a href="#" class="arrow-btn">
+                            <i class="bi bi-arrow-right"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-4">
+                <div class="service-card">
+                    <img src="images/IMG_20250618_191828_640.jpg" class="w-100" alt="img2">
+                    <div class="card-footer-custom">
+                        <div>
+                            <h6 class="mb-1 fs-4 fw-bold">Commercial electrician</h6>
+                            <p style="font-size: 1rem;font-weight: 600;">Specializes in installing, maintaining, and repairing</p>
+                        </div>
+                        <a href="#" class="arrow-btn">
+                            <i class="bi bi-arrow-right"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-4">
+                <div class="service-card">
+                    <img src="images/IMG_20250618_191851_312.jpg" class="w-100" alt="img3">
+                    <div class="card-footer-custom">
+                        <div>
+                            <h6 class="mb-1 fs-4 fw-bold">Commercial lighting</h6>
+                            <p style="font-size: 1rem;font-weight: 600;">Encompasses various illumination systems designed for functionality</p>
+                        </div>
+                        <a href="#" class="arrow-btn">
+                            <i class="bi bi-arrow-right"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="row g-4 mb-5">
+            <div class="col-md-4">
+                <div class="service-card">
+                    <img src="images/IMG_20250618_191930_552.jpg" class="w-100" alt="img4">
+                    <div class="card-footer-custom">
+                        <div>
+                            <h6 class="mb-1 fs-4 fw-bold">switchboard</h6>
+                            <p style="font-size: 1rem;font-weight: 600;">Troubleshooting electrical faults, replacing damaged components</p>
+                        </div>
+                        <a href="#" class="arrow-btn">
+                            <i class="bi bi-arrow-right"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-4">
+                <div class="service-card">
+                    <img src="images/IMG_20250618_191939_627.jpg" class="w-100" alt="img5">
+                    <div class="card-footer-custom">
+                        <div>
+                            <h6 class="mb-1 fs-4 fw-bold">Electrical testing& tagging</h6>
+                            <p style="font-size: 1rem;font-weight: 600;">Safe for use by inspecting, testing, and labeling it with the results</p>
+                        </div>
+                        <a href="#" class="arrow-btn">
+                            <i class="bi bi-arrow-right"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-4">
+                <div class="service-card">
+                    <img src="images/IMG_20250618_192010_817.jpg" class="w-100" alt="img6">
+                    <div class="card-footer-custom">
+                        <div>
+                            <h6 class="mb-1 fs-4 fw-bold">Electrical maintenance</h6>
+                            <p style="font-size: 1rem;font-weight: 600;">Inspecting, testing and repairing electrical systems and equipment</p>
+                        </div>
+                        <a href="#" class="arrow-btn">
+                            <i class="bi bi-arrow-right"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="row g-4 mb-5">
+            <div class="col-md-4">
+                <div class="service-card">
+                    <img src="images/IMG_20250618_192050_373.jpg" class="w-100" alt="img7">
+                    <div class="card-footer-custom">
+                        <div>
+                            <h6 class="mb-1 fs-4 fw-bold">Electrical safety inspection</h6>
+                            <p style="font-size: 1rem;font-weight: 600;">Access a property's electrical system to ensure it meets safty standards</p>
+                        </div>
+                        <a href="#" class="arrow-btn">
+                            <i class="bi bi-arrow-right"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-4">
+                <div class="service-card">
+                    <img src="images/IMG_20250618_192114_988.jpg" class="w-100" alt="img8">
+                    <div class="card-footer-custom">
+                        <div>
+                            <h6 class="mb-1 fs-4 fw-bold">Emergency& outdoor security lighting</h6>
+                        </div>
+                        <a href="#" class="arrow-btn">
+                            <i class="bi bi-arrow-right"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    
+    </div>
+</section>
+
+<section class="contact-section">
+    <div class="container">
+        <div class="row g-5">
+
+            <!-- LEFT CONTENT -->
+            <div class="col-lg-5 mb-5 mb-lg-0">
+                <div class="contact-title">
+                    <h6>Get in Touch</h6>
+                    <h2>Contact Electric Dreams</h2>
+                </div>
+
+                <div class="info-box">
+                    <div class="info-icon">
+                        <i class="bi bi-telephone"></i>
+                    </div>
+                    <div>
+                        <strong>Call us 24/7</strong><br>
+                        (+91)1234567890
+                    </div>
+                </div>
+
+                <div class="info-box">
+                    <div class="info-icon">
+                        <i class="bi bi-telephone"></i>
+                    </div>
+                    <div>
+                        <strong>$ Callout free</strong><br>
+                        During business hours (7.00 AM - 5.00 PM)
+                    </div>
+                </div>
+            </div>
+
+            <!-- RIGHT FORM -->
+            <div class="col-lg-7">
+                <div class="form-card">
+                    <form>
+                        <div class="row">
+                            <div class="col-md-6 mb-3">
+                                <label>First Name</label>
+                                <input type="text" class="form-control" placeholder="First Name">
+                            </div>
+                            <div class="col-md-6 mb-3">
+                                <label>Last name</label>
+                                <input type="text" class="form-control" placeholder="Last Name">
+                            </div>
+                        </div>
+
+                        <div class="row">
+                            <div class="col-md-6 mb-3">
+                                <label>Phone Number</label>
+                                <input type="text" class="form-control" placeholder="Phone number">
+                            </div>
+                            <div class="col-md-6 mb-3">
+                                <label>Email address</label>
+                                <input type="email" class="form-control" placeholder="Email id">
+                            </div>
+                        </div>
+
+                        <div class="mb-3">
+                            <label>Address (Optional)</label>
+                            <input type="text" class="form-control" placeholder="Address">
+                        </div>
+
+                        <div class="mb-3">
+                            <label>How can we help?</label>
+                            <textarea class="form-control" placeholder="Type your message..."></textarea>
+                        </div>
+
+                        <button type="submit" class="send-btn">
+                            Send Message
+                        </button>
+                    </form>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+<footer class="footer-section">
+    <div class="container">
+        <div class="row gy-4">
+            <div class="col-lg-4 col-md-6" style="text-align: left;">
+                <div class="footer-logo mb-3 ">
+                    <img src="images/IMG_20250618_142909_276-removebg-preview.png" alt="Electric Dreams Logo">
+                    <span style="color: white;">Electric dreams</span>
+                </div>
+                <p class="footer-text">
+                Voltaic Electrical provides expert residential, commercial, and emergency
+                electrical services across Perth.
+                </p>
+
+                <div class="footer-social">
+                <a href="#"><i class="bi bi-instagram"></i></a>
+                <a href="#"><i class="bi bi-google"></i></a>
+                </div>
+            </div>
+
+            <div class="col-lg-3 col-md-6">
+                <h5 class="footer-title">Services</h5>
+                <ul class="footer-list">
+                    <li>Lighting</li>
+                    <li>Private Power Poles</li>
+                    <li>Smoke Alarms</li>
+                    <li>EV Chargers</li>
+                    <li>Air Conditioning</li>
+                    <li>Thermographic Imaging</li>
+                    <li>View All</li>
+                </ul>
+            </div>
+
+            <div class="col-lg-2 col-md-6">
+                <h5 class="footer-title">Company</h5>
+                <ul class="footer-list">
+                    <li>About</li>
+                    <li>Service Areas</li>
+                    <li>Contact</li>
+                    <li>Reviews</li>
+                    <li>Resources</li>
+                    <li>Sitemap</li>
+                </ul>
+            </div>
+
+            <div class="col-lg-3 col-md-6">
+                <h5 class="footer-title">Get in Touch</h5>
+                <ul class="footer-contact">
+                    <li><i class="fas fa-location-dot"></i> Location, Chennai</li>
+                    <li><i class="fas fa-phone"></i> (+91)1234567890</li>
+                    <li><i class="fas fa-envelope"></i> Support@electricdreams.com</li>
+                </ul>
+            </div>
+
+        </div>
+    </div>
+</footer>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

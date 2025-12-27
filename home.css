@@ -1,0 +1,297 @@
+.hero-section {
+    position: relative;
+    padding: 140px 0 220px;
+    overflow: hidden;
+}
+
+.svg-bg {
+    position: absolute;
+    bottom:80px;
+    left: 50%;
+    width: 65%;
+    transform: translateX(-50%);
+    z-index: 1;
+}
+
+.svg-bg svg {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+.team-img {
+    position: relative;
+    z-index: 2;
+    max-width: 750px;
+    width: 100%;
+}
+
+.info-card {
+    position: absolute;
+    bottom: -150px;
+    left: 5%;
+    margin: -90px auto 0;
+    background: #0b1c2d;
+    color: white;
+    padding: 40px 60px;
+    z-index: 3;
+    opacity: 0.8;
+    box-shadow: 0 12px 30px rgba(0,0,0,0.1);
+}
+
+.info-card h5 {
+    color: #ff7a18;
+    font-weight: 600;
+    margin-bottom: 12px;
+    font-size: 1.5rem;
+}
+
+.info-card p {
+    margin: 0;
+    font-size: 1.2rem;
+    line-height: 1.6;
+}
+
+.services-section {
+    background: #fff;
+    overflow: hidden;
+}
+
+.slider-wrapper {
+    width: 100%;
+    overflow: hidden;
+    margin-bottom: 50px;
+}
+
+.slider-track {
+    display: flex;
+    width: max-content;
+    animation: scroll-left 10s linear infinite;
+}
+
+.service-card {
+    background: #0056b3;
+    color: #fff;
+    width: 400px;
+    margin: 0 15px;
+    border-radius: 20px;
+    padding: 20px;
+    flex-shrink: 0;
+}
+
+.service-card img {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+    border-radius: 15px;
+    margin-bottom: 15px;
+}
+
+.service-card h5 {
+    font-size: 1.3rem;
+    font-weight: 700;
+}
+
+.service-card p {
+    font-size: 1rem;
+}
+
+.view-btn{
+    background-color: #E25C26;
+    color: white;
+    font-size: 1.5rem;
+    border-radius: 25px;
+}
+
+.view-btn:hover{
+    background-color: #fff;
+    color: #000;
+    border: 1px solid black;
+}
+
+@keyframes scroll-left {
+    from {
+        transform: translateX(0);
+    }
+    to {
+        transform: translateX(-50%);
+    }
+}
+
+.text-orange {
+    color: #F65616;
+}
+
+.bg-blue {
+    background-color: #0056b3;
+}
+
+.image-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+.image-grid img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.info-card1 {
+    background: #fff;
+    color: #000;
+    padding: 25px;
+    border-radius: 10px;
+    height: 100%;
+}
+
+.info-card1 h3 {
+    font-size: 2rem;
+    font-weight: bold;
+}
+
+.info-card1 h6 {
+    font-weight: 600;
+    margin-top: 10px;
+    font-size: 1.2rem;
+}
+
+.info-card1 p {
+    font-size: 1rem;
+    margin-top: 8px;
+    color: #000;
+}
+
+.icon {
+    width: 50px;
+    height: 50px;
+    border: 2px solid #999;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 22px;
+    margin-bottom: 15px;
+}
+
+.process-card {
+    border: 5px solid #F65616;
+    padding: 30px;
+    height: 100%;
+}
+
+.process-card h1 {
+    font-size: 3rem;
+    color: #4c4b4b;
+    font-weight: 700;
+    text-align: center;
+}
+
+.process-card h5 {
+    font-weight: 700;
+    font-size: 1.5rem;
+    margin-bottom: 15px;
+}
+
+.testimonial-section {
+    background: #0056B3 ;
+}
+
+.testimonial-card {
+    background: #fff;
+    padding: 20px;
+    border-radius: 16px;
+    color: #000;
+    height: 100%;
+}
+
+.stars {
+    color: #ffc107;
+    font-size: 18px;
+    margin-bottom: 10px;
+}
+
+.user {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-top: 15px;
+}
+
+.user img {
+    border-radius: 50%;
+}
+
+.brands-section {
+    padding: 70px 0;
+}
+
+.brands-title {
+    color: #E25C26;
+    font-weight: 700;
+    margin-bottom: 40px;
+}
+
+.brand-logo {
+    max-width: 180px;
+    width: 100%;
+}
+
+
+.faq-section {
+    padding: 80px 0;
+    background: #ffffff;
+}
+
+.faq-title {
+    font-weight: 700;
+    color: #000;
+    font-size: 2rem;
+}
+
+.faq-subtitle {
+    color: #313030;
+    font-size: 1rem;
+}
+
+.faq-accordion {
+    max-width: 720px;
+}
+
+.accordion-item {
+    border: none;
+    background: #f2f2f2;
+    border-radius: 12px;
+    margin-bottom: 18px;
+    overflow: hidden;
+    font-size: 1.5rem;
+}
+
+.accordion-button {
+    background: #f2f2f2;
+    font-weight: 700;
+    box-shadow: none;
+    padding: 20px 24px;
+    font-size: 1.3rem;
+}
+
+.accordion-button:not(.collapsed) {
+    background: #f2f2f2;
+    color: #000;
+}
+
+.accordion-button:focus {
+    box-shadow: none;
+}
+
+.accordion-body {
+    padding: 0 24px 20px;
+    font-size: 1rem;
+    color:black;
+}
+
+@media (max-width: 768px) {
+    .info-card {
+        padding: 30px;
+        margin-top: -60px;
+    }
+}

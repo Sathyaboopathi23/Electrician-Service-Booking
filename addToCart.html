@@ -1,0 +1,501 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Electrician Service Booking</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
+  <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <link rel="icon" type="image/png" href="images/IMG_20250618_142909_276-removebg-preview.png"
+  >
+  <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="home.css">
+  <style>
+    h2 {
+        font-weight: 700;
+        margin: 30px 0;
+    }
+
+    .service-card1 {
+        border: 1.5px solid #000;
+        border-radius: 25px;
+        padding: 25px;
+    }
+
+    .service-img {
+        width: 130px;
+        height: 130px;
+        object-fit: contain;
+        background: #f5f5f5;
+        padding: 10px;
+        border-radius: 10px;
+    }
+
+    .service-title {
+        font-size: 1.5rem;
+        font-weight: 600;
+        margin-bottom: 10px;
+    }
+
+    .service-info {
+        font-size: 1.1rem;
+        margin-bottom: 4px;
+    }
+
+    .discount {
+        font-size: 1.1rem;
+        font-weight: 500;
+    }
+
+    .btn-orange {
+        background: #e45d25;
+        color: #fff;
+        border-radius: 30px;
+        padding: 12px 30px;
+        border: none;
+        font-size: 1.5rem;
+    }
+
+    .btn-orange:hover {
+        background: #cf4f1c;
+    }
+
+    .divider {
+        margin: 30px 0;
+        border-top: 1px solid #ccc;
+    }
+
+    .blue-box {
+        background: #3478bf;
+        color: #fff;
+        padding: 25px;
+        height: 100%;
+    }
+
+    .blue-box h4 {
+        font-weight: 600;
+        margin-bottom: 20px;
+    }
+
+    .process-step {
+        display: flex;
+        align-items: flex-start;
+        margin-bottom: 18px;
+    }
+
+    .step-circle {
+        width: 30px;
+        height: 30px;
+        background: rgba(255,255,255,0.3);
+        border-radius: 50%;
+        text-align: center;
+        line-height: 30px;
+        font-weight: bold;
+        margin-right: 15px;
+    }
+
+    .tech-list li {
+        list-style: none;
+        margin-bottom: 18px;
+        display: flex;
+        align-items: center;
+        gap: 12px;
+    }
+
+    .tech-list i {
+        font-size: 1.5rem;
+    }
+
+    .tech-img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+  </style>
+</head>
+<body>
+<div class="top-bar">
+    <div class="container d-flex justify-content-between align-items-center">
+        <div class="logo" onclick="window.location.href='home.html'">
+            <img src="images/IMG_20250618_142909_276-removebg-preview.png" alt="Electric Dreams Logo">
+            <span>Electric dreams</span>
+        </div>
+
+        <div class="header-buttons">
+            <a href="tel:+911234567890" class="btn btn-call">Call(+91)1234567890</a>
+            <a href="#" class="btn btn-book">Book Now</a>
+        </div>
+    </div>
+</div>
+
+<nav class="navbar navbar-expand-lg main-navbar py-3">
+    <div class="container">
+        <form class="d-flex search-box">
+            <i class="bi bi-search"></i>
+            <input class="form-control" type="search" placeholder="Search electricians">
+        </form>
+
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarMenu">
+        <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarMenu">
+            <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+                <li class="nav-item"><a class="nav-link" href="home.html">Home</a></li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown" role="button" onclick="window.location.href='service.html'">Services</a>
+                </li>
+                <li class="nav-item"><a class="nav-link" href="emerElect.html">Emergency electrician</a></li>
+                <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
+                <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+                <li class="nav-item"><a class="nav-link" href="area.html">Areas we services</a></li>
+                <li class="nav-item"><a class="nav-link" href="account.html">Account</a></li>
+                <li class="nav-item"><a class="nav-link" href="#" class="nav-link position-relative" data-bs-toggle="modal" data-bs-target="#cartModal">Cart <sup>1</sup></a></li>
+            </ul>
+        </div>
+    </div>
+</nav>
+
+<div class="modal fade" id="cartModal" tabindex="-1">
+    <div class="modal-dialog modal-dialog-end modal-full-height">
+        <div class="modal-content cart-drawer">
+            <div class="modal-header border-0">
+                <h5 class="modal-title fw-bold fs-3">Cart</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+            </div>
+
+            <div class="modal-body">
+                <p class="fw-semibold fs-4">Bulb/tubelight holder installation</p>
+                <div class="d-flex justify-content-between align-items-center mb-3">
+                    <span class="fs-4 fw-bold">Add</span>
+                    <div class="qty">
+                        <button>-</button>
+                        <span>1</span>
+                        <button>+</button>
+                    </div>
+                </div>
+                <p class="fw-bold fs-5">Amount: ₹109</p>
+                <div class="offer-strip">
+                    Add ₹92 more to save on visitation fees
+                </div>
+                <button class="btn book-btn w-100 mt-3" onclick="window.location.href='checkOut.html'">Book now</button>
+
+                <hr>
+
+                <div class="offer-card">
+                    <div class="d-flex gap-2 align-items-center">
+                        <i class="bi bi-percent text-danger"></i>
+                        <div>
+                            <strong class="fs-4 fw-bold">Get visitation fees offer</strong><br>
+                            <small>On orders above ₹200</small><br>
+                            <a href="#" class="text-danger text-decoration-none">View more offers</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="uc-box mt-4">
+                    <p class="fs-4 text-center fw-bold">UC promise</p>
+                    <ul>
+                        <li>✔ Verified professionals</li>
+                        <li>✔ Hassle free booking</li>
+                        <li>✔ Transparent pricing</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="container">
+
+    <h2>Lighting Installation</h2>
+
+    <div class="service-card1 mb-4">
+        <div class="row align-items-center">
+            <div class="col-md-2 text-center">
+                <img src="images/image (13).png"
+                     class="service-img" alt="Holder Img">
+            </div>
+
+            <div class="col-md-6">
+                <div class="service-title">Bulb/tubelight holder installation</div>
+                <div class="service-info">4.87 (30K reviews)</div>
+                <div class="service-info">₹109</div>
+                <div class="service-info">20 mins</div>
+                <div class="discount">₹20 off 2nd item onwards</div>
+            </div>
+
+            <div class="col-md-4 text-end">
+                <button class="btn-orange mb-3" data-bs-toggle="modal" data-bs-target="#cartModal">Add to cart</button><br>
+                <button class="btn-orange">Call (+91)1234567890</button>
+            </div>
+        </div>
+    </div>
+
+    <div class="divider"></div>
+
+    <div class="row g-5">
+        <div class="col-md-7">
+            <div class="blue-box">
+                <h4>Our Process</h4>
+
+                <div class="process-step">
+                    <div class="step-circle">1</div>
+                    <div>
+                        <strong>Inspection</strong><br>
+                        We will check the space where you want to install the holder
+                    </div>
+                </div>
+
+                <div class="process-step">
+                    <div class="step-circle">2</div>
+                    <div>
+                        <strong>Installation</strong><br>
+                        We will install the holder with care
+                    </div>
+                </div>
+
+                <div class="process-step">
+                    <div class="step-circle">3</div>
+                    <div>
+                        <strong>Cleanup</strong><br>
+                        We will clean the area once work is done
+                    </div>
+                </div>
+
+                <div class="process-step">
+                    <div class="step-circle">4</div>
+                    <div>
+                        <strong>Warranty activation</strong><br>
+                        The service is covered by a 30-day warranty for any issues after installation
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-md-5">
+            <div class="blue-box">
+                <h4>Top technicians</h4>
+
+                <div class="row g-5">
+                    <div class="col-7">
+                        <ul class="tech-list p-0">
+                            <li><i class="bi bi-shield-check"></i> Background verified</li>
+                            <li><i class="bi bi-tools"></i> Trained across all major brands</li>
+                            <li><i class="bi bi-award"></i> Certified under skill india programme</li>
+                        </ul>
+                    </div>
+                    <div class="col-5">
+                        <img src="images/IMG_20250618_191828_640.jpg"
+                             class="tech-img">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<section class="faq-section">
+    <div class="container">
+        <div class="text-center mb-5">
+            <h2 class="faq-title">Frequently Asked Questions</h2>
+            <p class="faq-subtitle">Everything you need to know about our services.</p>
+        </div>
+
+        <div class="accordion faq-accordion mx-auto" id="faqAccordion">
+
+            <div class="accordion-item">
+                <h2 class="accordion-header">
+                <button class="accordion-button" data-bs-toggle="collapse" data-bs-target="#faq1">
+                    Did you charge call-out fee?
+                </button>
+                </h2>
+                <div id="faq1" class="accordion-collapse collapse show" data-bs-parent="#faqAccordion">
+                    <div class="accordion-body">
+                        No! We offer a $0 callout fee During Business Hours, so you only pay for the work we do—no hidden costs or surprises.
+                    </div>
+                </div>
+            </div>
+
+            <div class="accordion-item">
+                <h2 class="accordion-header">
+                <button class="accordion-button collapsed" data-bs-toggle="collapse" data-bs-target="#faq2">
+                    Do you offer emergency electrical services?
+                </button>
+                </h2>
+                <div id="faq2" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                    <div class="accordion-body">
+                        Yes! We provide 24/7 emergency electrical repairs, ensuring you get fast and reliable service when you need it most.
+                    </div>
+                </div>
+            </div>
+
+            <div class="accordion-item">
+                <h2 class="accordion-header">
+                <button class="accordion-button collapsed" data-bs-toggle="collapse" data-bs-target="#faq3">
+                    Do you work with business and commercial properties?
+                </button>
+                </h2>
+                <div id="faq3" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                    <div class="accordion-body">
+                        Yes! We provide comprehensive commercial electrical services, including office fit-outs, lighting upgrades, and compliance testing.
+                    </div>
+                </div>
+            </div>
+
+            <div class="accordion-item">
+                <h2 class="accordion-header">
+                <button class="accordion-button collapsed" data-bs-toggle="collapse" data-bs-target="#faq4">
+                    Are you licensed and insured?
+                </button>
+                </h2>
+                <div id="faq4" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                    <div class="accordion-body">
+                        Yes! Voltaic Electrical is fully licensed and insured, ensuring all work meets Australian safety standards.
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+<section class="testimonial-section py-5" style="background-color: white;">
+    <div class="container text-center mb-5" style="color: black;">
+        <h3>What Our Happy Customers Are Saying</h3>
+    </div>
+
+    <div class="container">
+        <div class="row g-4">
+
+            <div class="col-md-3">
+                <div class="testimonial-card" style="border: 1px solid black;">
+                    <div class="stars">★★★★★</div>
+                    <p>
+                        Had my private power pole replaced, they did an exceptional job.
+                        Competitive pricing, was well below the other quotes i got for the job, Great service!
+                    </p>
+                    <div class="user">
+                        <img src="images/image (9).png" alt="userImg">
+                        <div>
+                        <strong>Stephen Watts</strong><br>
+                        <strong>Private Power Pole Installation</strong>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-3">
+                <div class="testimonial-card" style="border: 1px solid black;">
+                    <div class="stars">★★★★★</div>
+                    <p>
+                        Connor was very diligent in troubleshooting our outdoor low voltage lighting. No problem niw, all resolved by Connor, he's good troubleshooter.
+                    </p>
+                    <div class="user">
+                        <img src="images/image (10).png" alt="userImg">
+                        <div>
+                        <strong>Dean McKenzie</strong><br>
+                        <strong>Outdoor Lighting</strong>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-3">
+                <div class="testimonial-card" style="border: 1px solid black;">
+                    <div class="stars">★★★★★</div>
+                    <p>
+                        Connor and the team done an exceptional job at our property on a number of electrical tasks including the installation of downlights and ceiling fans.
+                    </p>
+                    <div class="user">
+                        <img src="images/image (11).png" alt="userImg">
+                        <div>
+                        <strong>Daniel Pollifrone</strong><br>
+                        <strong>Lighting & Ceiling Fans</strong>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-3">
+                <div class="testimonial-card" style="border: 1px solid black;">
+                    <div class="stars">★★★★★</div>
+                    <p>
+                        Had a power short out, called after hours, they came out within the hour and had my power back up in no time! Reasonable pricing and knowledgeable tradesman. Greate job mate. 
+                    </p>
+                    <div class="user">
+                        <img src="images/image (12).png" alt="userImg">
+                        <div>
+                        <strong>Dean Orchard</strong><br>
+                        <strong>Emergency Call-Out</strong>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+<footer class="footer-section">
+    <div class="container">
+        <div class="row gy-4">
+            <div class="col-lg-4 col-md-6" style="text-align: left;">
+                <div class="footer-logo mb-3 ">
+                    <img src="images/IMG_20250618_142909_276-removebg-preview.png" alt="Electric Dreams Logo">
+                    <span style="color: white;">Electric dreams</span>
+                </div>
+                <p class="footer-text">
+                Voltaic Electrical provides expert residential, commercial, and emergency
+                electrical services across Perth.
+                </p>
+
+                <div class="footer-social">
+                <a href="#"><i class="bi bi-instagram"></i></a>
+                <a href="#"><i class="bi bi-google"></i></a>
+                </div>
+            </div>
+
+            <div class="col-lg-3 col-md-6">
+                <h5 class="footer-title">Services</h5>
+                <ul class="footer-list">
+                    <li>Lighting</li>
+                    <li>Private Power Poles</li>
+                    <li>Smoke Alarms</li>
+                    <li>EV Chargers</li>
+                    <li>Air Conditioning</li>
+                    <li>Thermographic Imaging</li>
+                    <li>View All</li>
+                </ul>
+            </div>
+
+            <div class="col-lg-2 col-md-6">
+                <h5 class="footer-title">Company</h5>
+                <ul class="footer-list">
+                    <li>About</li>
+                    <li>Service Areas</li>
+                    <li>Contact</li>
+                    <li>Reviews</li>
+                    <li>Resources</li>
+                    <li>Sitemap</li>
+                </ul>
+            </div>
+
+            <div class="col-lg-3 col-md-6">
+                <h5 class="footer-title">Get in Touch</h5>
+                <ul class="footer-contact">
+                    <li><i class="fas fa-location-dot"></i> Location, Chennai</li>
+                    <li><i class="fas fa-phone"></i> (+91)1234567890</li>
+                    <li><i class="fas fa-envelope"></i> Support@electricdreams.com</li>
+                </ul>
+            </div>
+
+        </div>
+    </div>
+</footer>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
